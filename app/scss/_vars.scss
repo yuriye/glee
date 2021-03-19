@@ -1,0 +1,55 @@
+$default: #243f4d;
+$main-bg: #fff;
+$slider-bg:#fcd7b6;
+$divider: #fde7d3;
+$highlight: #feefe2;
+$highlight-lite: #fef7f0;
+$partners-bg: #fef7f0;
+$menu-color: #436372;
+$slider-content: #436372;
+$slider-button: #fde3cc;
+$button: #a3bbc8;
+$search-bg: #edf1f4;
+$gallery-title: #191919;
+$gallery-menu-active: #363636;
+$gallery-menu: #8b8b8b;
+$card-title: #1a1a1a;
+$articles: #3f3f3f;
+$article-footer: #222933;
+$footer-content: #7b7b7b;
+$footer_title: #1f2044;
+
+%dmsans-400 {
+  font-family: 'DMSans-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%dmsans-500 {
+  font-family: 'DMSans-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%dmsans-700 {
+  font-family: 'DMSans-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%rubic-400 {
+  font-family: 'Rubic-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%rubic-500 {
+  font-family: 'Rubic-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%rubic-700 {
+  font-family: 'Rubic-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%poppins-700 {
+  font-family: 'Poppins-Bold', sans-serif;
+  font-weight: 700;
+}

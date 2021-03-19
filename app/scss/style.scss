@@ -1,0 +1,171 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
+
+.header {
+  padding: 51px 0 54px;
+  &__inner {
+    display: block;
+    position: relative;
+  }
+}
+
+.logo {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  min-width: 146px;
+  margin-right: 27.4%;
+}
+
+.menu {
+  position: absolute;
+  left: 35.6%;
+  top: 4px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__list-item:not(:last-child) {
+    margin-right: 38px;
+  }
+
+  &__list-link {
+    text-transform: capitalize;
+    color: $menu-color;
+    @extend %rubic-500;
+    transition: all 0.3s;
+
+    &:hover::after {
+      content: "+";
+      margin-right: -0.6em;
+    }
+
+    &:focus {
+      color: $button;
+      &::after {
+        content: "+";
+        margin-right: -0.6em;
+      }
+    }
+    
+    &:active {
+      color: $button;
+      &::after {
+        content: "+";
+        margin-right: -0.6em;
+      }
+    }
+  }
+}
+
+.user-nav {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+
+  &__link {
+    display: flex;
+    height: 51px;
+    width: 51px;
+    justify-content: center;
+    align-items: center;
+
+    &--search {
+      background-color: $search-bg;
+      border-radius: 50%;
+      margin-right: 20px;
+      transition: background-color 0.3s;
+
+      path {
+        fill: $default;
+        transition: fill 0.3s;
+      }
+
+      &:hover {
+        background-color: $button;
+        path {
+          fill: $main-bg;
+        }
+      }
+    }
+
+    &--my-products {
+      width: 74px;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+
+      path {
+        transition: fill 0.3s;
+      }
+
+      &:hover path {
+        fill: $main-bg;
+      }
+    }
+
+    &--my-products:first-child::after {
+      display: block;
+      content: "";
+      width: 2px;
+      height: 60%;
+      background-color: $divider;
+      position: relative;
+      transform: translateX(14px);
+    }
+
+    &--apps {
+      background-color: $button;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+
+      path {
+        fill: $main-bg;
+        transition: fill 0.3s;
+      }
+
+      &:hover {
+        background-color: $search-bg;
+        path {
+          fill: $default;
+        }
+      }
+    }
+  }
+
+  &__my-products {
+    min-height: 51px;
+    padding: 4px 0 0 16px;
+    display: flex;
+    justify-content: center;
+    min-width: 178px;
+    background-color: $slider-bg;
+    border-radius: 25px;
+    margin-right: 18px;
+  }
+
+  &__num {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: $default;
+    font-size: 10px;
+    background-color: $main-bg;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    @extend %dmsans-400;
+    position: relative;
+    top: -8px;
+    left: -8px;
+  }
+}
+
+@import "media";
