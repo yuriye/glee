@@ -4,34 +4,29 @@
 @import "global";
 
 .header {
-  padding: 51px 0 54px;
   &__inner {
-    display: block;
-    position: relative;
+    padding: 50px 0 52px;
+    display: flex;
   }
 }
 
 .logo {
   display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  min-width: 146px;
-  margin-right: 27.4%;
+  &--header {
+    margin-right: 27.4%;
+  }
 }
 
 .menu {
-  position: absolute;
-  left: 35.6%;
-  top: 4px;
+  padding-top: 3px;
+  margin-right: 336px;
 
   &__list {
     display: flex;
   }
 
   &__list-item:not(:last-child) {
-    margin-right: 38px;
+    margin-right: 40px;
   }
 
   &__list-link {
@@ -52,7 +47,7 @@
         margin-right: -0.6em;
       }
     }
-    
+
     &:active {
       color: $button;
       &::after {
@@ -64,10 +59,6 @@
 }
 
 .user-nav {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
   display: flex;
 
   &__link {
@@ -96,31 +87,6 @@
       }
     }
 
-    &--my-products {
-      width: 74px;
-      display: flex;
-      justify-content: center;
-      align-content: center;
-
-      path {
-        transition: fill 0.3s;
-      }
-
-      &:hover path {
-        fill: $main-bg;
-      }
-    }
-
-    &--my-products:first-child::after {
-      display: block;
-      content: "";
-      width: 2px;
-      height: 60%;
-      background-color: $divider;
-      position: relative;
-      transform: translateX(14px);
-    }
-
     &--apps {
       background-color: $button;
       border-radius: 50%;
@@ -139,16 +105,51 @@
       }
     }
   }
+}
 
-  &__my-products {
-    min-height: 51px;
-    padding: 4px 0 0 16px;
-    display: flex;
-    justify-content: center;
-    min-width: 178px;
-    background-color: $slider-bg;
-    border-radius: 25px;
-    margin-right: 18px;
+.my-products {
+  position: relative;
+  height: 50px;
+  width: 178px;
+  padding: 4px 0 0 16px;
+  background-color: $slider-bg;
+  border-radius: 25px;
+  margin-right: 18px;
+  &::before {
+    display: block;
+    content: "";
+    width: 2px;
+    height: 60%;
+    background-color: $divider;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+  }
+
+  &__link {
+    display: block;
+    position: absolute;
+    height: 80%;
+    width: 25%;
+    padding: 8% 0% 0% 8%;
+
+    path {
+      transition: fill 0.3s;
+    }
+
+    &:hover path {
+      max-width: 74px;
+      display: flex;
+      fill: $main-bg;
+    }
+
+    &--flagged {
+      left: 17%;
+    }
+
+    &--cart {
+      right: 17%;
+    }
   }
 
   &__num {
@@ -163,9 +164,129 @@
     border-radius: 50%;
     @extend %dmsans-400;
     position: relative;
-    top: -8px;
-    left: -8px;
+    top: -37px;
+    left: 11px;
   }
 }
 
+.footer {
+  background-color: $main-bg;
+  font-size: 14px;
+}
+
+.logo--footer {
+  display: block;
+  margin-bottom: 23px;
+}
+
+.footer-top {
+  display: flex;
+  padding: 70px 0 75px;
+  border-bottom: 1px solid $footer_border;
+
+  &__item {
+    width: 270px;
+    height: 100%;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__address {
+    font-style: normal;
+    &::before {
+      display: inline;
+      content: "address:";
+      text-transform: uppercase;
+    }
+  }
+
+  &__phone::before {
+    display: inline;
+    content: "telephone:";
+    text-transform: uppercase;
+  }
+
+  &__email::before {
+    display: inline;
+    content: "email:";
+    text-transform: uppercase;
+  }
+
+  &__title {
+    padding: 10px 0 10px;
+    @extend %dmsans-700;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    display: block;
+    color: $footer-content;
+  }
+
+  &__list-item:not(:last-child) {
+    margin-bottom: 7px;
+  }
+
+  &__contact:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    margin-bottom: 37px;
+  }
+
+  &__form-input {
+    background-color: $partners-bg;
+    max-width: 170px;
+    border: none;
+    padding: 5px 1px 5px 15px;
+    &::placeholder {
+      color: $input-text;
+      font-size: 12px;
+      text-transform: capitalize;
+    }
+  }
+
+  &__form-btn {
+    border: none;
+    max-width: 100px;
+    background-color: $button;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+    transform: translateX(-4px);
+  }
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 36px 0;
+
+  &__link {
+    display: block;
+  }
+
+  &__menu {
+    display: flex;
+  }
+
+  &__link {
+    padding-left: 14px;
+    text-transform: capitalize;
+    color: $footer-content;
+  }
+
+  &__link:not(:last-child) {
+    padding-right: 14px;
+  }
+
+    &__link:not(:last-child) {
+    border-right: 1px solid $footer-content;
+  }
+
+}
 @import "media";
