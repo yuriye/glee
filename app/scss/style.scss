@@ -1,11 +1,13 @@
 @import "vars";
 @import "fonts";
 @import "reset";
+@import "slick";
+// @import "slick-theme";
 @import "global";
 
 .header {
   &__inner {
-    padding: 50px 0 52px;
+    padding: 50px 0 43px;
     display: flex;
   }
 }
@@ -256,11 +258,12 @@
     background-color: $button;
     color: #fff;
     text-transform: capitalize;
-    padding: 5px 10px 5px 10px;
+    padding: 5px 16px 5px 16px;
     cursor: pointer;
     transform: translateX(-4px);
   }
 }
+
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -284,9 +287,113 @@
     padding-right: 14px;
   }
 
-    &__link:not(:last-child) {
+  &__link:not(:last-child) {
     border-right: 1px solid $footer-content;
   }
-
 }
+
+.top-slider {
+  &__inner {
+    min-height: 817px;
+    background-image: url("../images/slider/top-slider-bg.png");
+  }
+
+  &__item {
+    display: flex !important;
+    justify-content: center;
+    padding-top: 214px;
+  }
+
+  &__content {
+    max-width: 28%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @extend %rubic-700;
+    font-size: 72px;
+    letter-spacing: -2px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    max-width: 370px;
+    font-size: 18px;
+    letter-spacing: 0.6px;
+    line-height: 1.5;
+    color: $slider-content;
+    margin-bottom: 39px;
+  }
+
+  &__item-btn {
+    display: block;
+    max-width: 200px;
+    background-color: $button;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 16px 19px 16px 28px;
+  }
+
+  &__item-btn::after {
+    content: url("../images/slider/arrow-right.svg");
+    margin-left: 55px;
+  }
+
+  &__img-container {
+    padding: 66px 0 0 41px;
+    display: flex;
+    justify-content: end;
+  }
+
+  &__img {
+    display: block;
+    object-fit: contain;
+  }
+
+  .slick-list {
+    margin-bottom: 200px;
+  }
+
+  .slick-dots {
+  
+    display: flex;
+    justify-content: center;
+    margin-right: 5px;
+
+    li:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    button {
+      border: none;
+      border-radius: 50%;
+      background-color: #fff;
+      opacity: 0.302;
+      width: 30px;
+      height: 30px;
+      font-size: 14px;
+      @extend %rubic-700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slick-active {
+      border: none;
+      border-radius: 50%;
+      background-color: #fff;
+      opacity: 1;
+      width: 30px;
+      height: 30px;
+      font-size: 14px;
+      @extend %rubic-700;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
 @import "media";
