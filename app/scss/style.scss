@@ -6,22 +6,27 @@
 @import "global";
 
 .header {
+  padding: 50px 0 43px;
   &__inner {
-    padding: 50px 0 43px;
+    
     display: flex;
   }
 }
 
 .logo {
+  min-width: 150px;
   display: block;
   &--header {
     margin-right: 27.4%;
   }
+  &__img {
+    display: block;
+  }
 }
 
 .menu {
-  padding-top: 3px;
-  margin-right: 336px;
+  padding: 3px;
+  margin-right: 18.5%;
 
   &__list {
     display: flex;
@@ -358,7 +363,6 @@
   }
 
   .slick-dots {
-  
     display: flex;
     justify-content: center;
     margin-right: 5px;
@@ -393,6 +397,183 @@
       justify-content: center;
       align-items: center;
     }
+  }
+
+  &__about {
+    display: flex;
+    justify-content: space-around;
+    background-color: $highlight-lite;
+    height: 170px;
+  }
+
+  &__about-item {
+    height: 100%;
+    min-width: 34%;
+    padding: 0 148px 0 226px;
+    background-repeat: no-repeat;
+    background-position-y: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-position: 26% 42%;
+  }
+
+  &__about-item:not(:last-child) {
+    border-right: 1px solid $about_border;
+  }
+
+  &__about-title {
+    display: block;
+    @extend %dmsans-700;
+    font-size: 18px;
+  }
+
+  &__about-text {
+    @extend %dmsans-400;
+  }
+}
+
+.products {
+  padding: 57px 0 80px;
+
+  .products-top {
+    display: flex;
+    flex-direction: column;
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    @extend %dmsans-700;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 7px;
+  }
+
+  &__filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+
+  &__filter-btn {
+    border: none;
+    color: $gallery-menu;
+    background-color: transparent;
+    @extend %dmsans-700;
+    text-transform: capitalize;
+    transition: color 0.3s;
+    cursor: pointer;
+  }
+
+  &__filter-btn:active {
+    color: $gallery-menu-active;
+  }
+
+  &__filter-btn:hover {
+    color: $gallery-menu-active;
+  }
+
+  &__filter-btn:not(:last-child) {
+    margin-right: 18px;
+  }
+
+  .products-cards {
+    display: flex;
+    max-width: 80%;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-count: 4;
+    column-gap: 30px;
+    row-gap: 40px;
+  }
+}
+
+.product-card {
+  width: 270px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+
+  &__wrapper {
+    height: 250px;
+    width: 270px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+  }
+
+  &__photo {
+    object-fit: contain;
+  }
+
+  &__name {
+    display: block;
+    @extend %dmsans-700;
+    text-align: center;
+    line-height: 1;
+  }
+
+  &__price {
+    display: block;
+    @extend %dmsans-700;
+    color: $button;
+    text-align: center;
+  }
+
+  &__price::before {
+    content: "$";
+  }
+
+  &__links {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: background-color 0.3s;
+  }
+
+  &__link:hover {
+    background-color: $button;
+  }
+
+  &__link path {
+    fill: $button;
+    transition: fill 0.3s;
+  }
+
+  &__link:hover path {
+    fill: #fff;
+  }
+
+  &__link:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  &__img {
+    display: block;
   }
 }
 
