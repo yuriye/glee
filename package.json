@@ -16,6 +16,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^4.1.0",
+    "gulp-stylelint": "^13.0.0",
     "gulp-uglify": "^3.0.2",
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-pngquant": "^9.0.2",
@@ -24,6 +25,7 @@
     "mixitup": "^3.3.1",
     "mozjpeg": "^7.0.0",
     "pngquant-bin": "^6.0.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "stylelint": "^13.12.0"
   }
 }

@@ -1,10 +1,10 @@
 $(function () {
 
-  $('.top-slider__inner').slick({
+  $('.slider__inner').slick({
     dots: true,
     arrows: false,
     fade: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000
   });
 
@@ -19,5 +19,5 @@ $(function () {
       $(this).find('.product-card__links').css('display', 'none');
     })
 
-  var mixer = mixitup('.products-cards');
+  var mixer = mixitup('.cards');
 })
