@@ -8,8 +8,6 @@ $(function () {
     autoplaySpeed: 2000
   });
 
-  $('.svg-inline').inlineSvg();
-  $('[data-inline-svg]').inlineSvg();
 
   $('.product-card')
     .mouseenter(function () {
@@ -20,4 +18,9 @@ $(function () {
     })
 
   var mixer = mixitup('.cards');
+  var mixerNewDesign = mixitup('.cards-new');
+
+  $([data-fancybox]).fancybox();
+
+
 })

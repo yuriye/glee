@@ -727,7 +727,7 @@
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 29px;
   grid-row-gap: 9px;
-  margin-bottom: 78px;
+  margin-bottom: 108px;
 
   &__item {
     padding: 0;
@@ -877,5 +877,54 @@
       content: url("../images/icons/arrow-right-grey.svg");
       margin-left: 50px;
     }
+  }
+}
+
+.video {
+  &__inner {
+    max-width: 100%;
+    min-height: 495px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__play {
+    display: block;
+    width: 137px;
+    height: 137px;
+    border-radius: 50%;
+    display: flex;justify-content: center;
+    align-items: center;
+  }
+
+  &__play:focus {
+    outline: transparent;
+    border: 3px solid $main-bg;
+  }
+
+  &__play svg circle {
+    opacity: 0.4;
+    fill: $button;
+    transition: opacity 0.3s, fill 0.3s;
+  }
+
+  &__play:hover svg circle {
+    opacity: 0.8;
+  }
+
+  &__play:active svg circle {
+    fill: $main-bg;
+  }
+
+  &__play svg path {
+    fill: $main-bg;
+    transition: fill 0.3s;
+  }
+
+  &__play:active svg path {
+    fill: $button;
   }
 }
