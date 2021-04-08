@@ -8,6 +8,14 @@ $(function () {
     autoplaySpeed: 2000
   });
 
+  $('.partners__list').slick({
+    dots: false,
+    arrows: false,
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 3
+  });
+
 
   $('.product-card')
     .mouseenter(function () {
@@ -20,7 +28,7 @@ $(function () {
   var mixer = mixitup('.cards');
   var mixerNewDesign = mixitup('.cards-new');
 
-  $([data-fancybox]).fancybox();
+  // $([data-fancybox]).fancybox();
 
 
 })
