@@ -33,6 +33,7 @@ function scripts() {
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/jquery-inline-svg/dist/jquery-inline-svg.min.js',
     'node_modules/slick-carousel/slick/slick.js',
+    'node_modules/fancybox/dist/js/jquery.fancybox.pack.js',
     'node_modules/mixitup/dist/mixitup.min.js',
     'app/js/main.js'
   ]))

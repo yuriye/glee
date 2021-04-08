@@ -1,15 +1,21 @@
 $(function () {
 
-  $('.top-slider__inner').slick({
+  $('.slider__inner').slick({
     dots: true,
     arrows: false,
     fade: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000
   });
 
-  $('.svg-inline').inlineSvg();
-  $('[data-inline-svg]').inlineSvg();
+  $('.partners__list').slick({
+    dots: false,
+    arrows: false,
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 3
+  });
+
 
   $('.product-card')
     .mouseenter(function () {
@@ -19,5 +25,10 @@ $(function () {
       $(this).find('.product-card__links').css('display', 'none');
     })
 
-  var mixer = mixitup('.products-cards');
+  var mixer = mixitup('.cards');
+  var mixerNewDesign = mixitup('.cards-new');
+
+  // $([data-fancybox]).fancybox();
+
+
 })
